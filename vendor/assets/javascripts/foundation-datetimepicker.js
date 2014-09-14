@@ -455,7 +455,7 @@
 			} else {
 				date = this.element.data('date') || (this.isInput ? this.element.val() : this.element.find('input').val()) || this.initialDate;
 				if (typeof date == 'string' || date instanceof String) {
-				  date = date.replace(/^\s+|\s+$/g,'');
+				  date = new Date(date.replace(/^\s+|\s+$/g,''));
 				}
 			}
 
